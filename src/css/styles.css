@@ -53,7 +53,7 @@ font-family: "Montserrat", sans-serif;
     letter-spacing: 0.04em;
     color: #2e2f42;
     padding-left: 15px;
-    outline: transparent;
+     outline: transparent;
 
 }
 
@@ -73,7 +73,6 @@ font-family: "Montserrat", sans-serif;
   height: 40px;
   background: #fff;
   border: 1px solid #808080;
-
   font-size: 20px;
   text-align: center;
   color: #808080;
@@ -156,5 +155,96 @@ button {
 }
 
 button:hover {
+  background: #6c8cff;
+}
+
+
+
+/*-------------------Snackbar--------------------- */
+
+.form{
+
+  width: 360px;
+  font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    display: flex;
+    flex-direction: column;
+    margin-left: 156px;
+  
+}
+
+.delay-input-container{
+width: 360px;
+  height: 72px;
+  margin-bottom: 16px;
+
+  .input-delay{
+
+width: 360px;
+height: 40px;
+border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+
+  }
+
+}
+.state {
+display: flex;
+flex-direction: row;
+  height: 78px;
+border-radius: 4px;
+  stroke-width: 1px;
+  stroke: #808080;
+margin-bottom: 24px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+
+}
+
+.label-state {
+
+  width: 264px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+   align-content: baseline;
+  
+}
+
+.radio-button {
+  border: 1px solid #757575;
+  border-radius: 14px;
+  width: 20px;
+  height: 20px;
+  align-content: baseline;
+}
+
+.btn-submit {
+
+  border-radius: 8px;
+    padding: 8px 16px;
+    width: 360px;
+    height: 40px;
+  border-color: transparent;
+  background: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-submit {
   background: #6c8cff;
 }
