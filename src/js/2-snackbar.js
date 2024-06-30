@@ -1,12 +1,11 @@
 
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+  const refs = {
+  form: document.querySelector('.form'),
+  input: document.querySelector('input[name ="delay"]'),
 
-const refs = {
-     form: document.querySelector('.form'),
-    input: document.querySelector('input[name ="delay"]'),
-
-    button: document.querySelector('button[type ="submit"]'),
+  button: document.querySelector('button[type ="submit"]'),
 };
 
 refs.form.addEventListener('submit', e => {
@@ -25,32 +24,32 @@ refs.form.addEventListener('submit', e => {
     }, delay);
   });
 
-  promise.then(onFulfilled).catch(onRejected);
-  function onFulfilled() {
+
+    promise.then(delay => {
+        iziToast.show({
+            title: 'Success',
+            message: `✅ Fulfilled promise in ${delay}ms`,
+            messageColor: '#fff',
+            position: "center",
+            titleColor: '#fff',
+            titleSize: '16px',
+            backgroundColor: '#59a10d',
+            progressBar: '#326101',
+            position: 'topRight',
+        });
+    })
+.catch(delay => {
     iziToast.show({
-      title: 'OK',
-      titleColor: '#fff',
-      titleSize: '16px',
-      message: `✅ Fulfilled promise in ${delay}ms`,
-      messageColor: '#fff',
-      backgroundColor: '#59a10d',
-      iconColor: '#fff',
-      progressBarColor: '#326101',
-      position: 'topRight',
+        title: 'Error',
+        message: `❌ Rejected promise in ${delay}ms`,
+        position: 'center',
+        messageColor: '#fff',
+        titleColor: '#fff',
+        titleSize: '16px',
+        backgroundColor: '#ef4040',
+        progressBar: '#51b1b',
+        position: 'topRight',
     });
-  }
-  function onRejected() {
-    iziToast.show({
-      title: 'ERROR',
-      titleColor: '#fff',
-      titleSize: '16px',
-      message: `❌ Rejected promise in ${delay}ms`,
-      messageColor: '#fff',
-      backgroundColor: '#ef4040',
-      iconColor: '#fff',
-      progressBarColor: '#b51b1b',
-      position: 'topRight',
-    });
-  }
+});
 });
 
