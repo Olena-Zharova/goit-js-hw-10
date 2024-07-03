@@ -52,4 +52,3 @@ refs.form.addEventListener('submit', e => {
     });
 });
 });
-

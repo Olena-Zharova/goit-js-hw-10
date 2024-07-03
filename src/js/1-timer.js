@@ -29,17 +29,20 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     console.log(selectedDates[0]);
-    
-      if (userSelectedDate < new Date()) {
+        
+
+    userSelectedDate = selectedDates[0];
+
+     if (userSelectedDate < new Date()) {
       iziToast.show({
-        title: 'Error',
-        message: 'Please choose a date in the future',
-        backgroundColor: '#ef4040',
-        titleColor: '#fff',
-        titleSize: '16px',
-        progressBarColor: '#B51B1B',
-        position: 'topRight',
-      });
+      title: 'Error',
+      message: "Please choose a date in the future",
+      titleColor: '#fff',
+      titleSize: '16px',
+      position: 'topRight',
+      backgroundColor: '#ef4040',
+      progressBarColor: '#B51B1B',
+      });  
       refs.startBtn.disabled = true;
     } else {
       userSelectedDate = selectedDates[0];
@@ -47,6 +50,8 @@ const options = {
     }
   },
 };
+
+
 
 flatpickr('#datetime-picker', options); 
       
@@ -90,7 +95,7 @@ function convertMs(ms) {
 console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
 console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
 console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
-     
+  
 
   
 
